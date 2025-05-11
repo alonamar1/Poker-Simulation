@@ -28,13 +28,16 @@ public class pack {
                         shape = "Spades";
                         break;
                 }
-                deck.add(new card(j, shape));
+                if (j==1)
+                    deck.add(new card(14, shape));
+                else 
+                    deck.add(new card(j, shape));
             }
         }
     }
 
     // Shuffle the deck
-    public void shaffle() {
+    public void shuffle() {
         Collections.shuffle((List<?>) deck);
     }
 
